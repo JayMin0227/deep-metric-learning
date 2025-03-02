@@ -46,7 +46,7 @@ class Net(nn.Module):
 def visualize(feat, labels, epoch):
     plt.ion()
     c = ['#ff0000', '#ffff00', '#00ff00', '#00ffff', '#0000ff',
-        '#ff00ff', '#990000', '#999900', '#009900', '#009999']
+         '#ff00ff', '#990000', '#999900', '#009900', '#009999']
     plt.clf()
     for i in range(10):
         plt.plot(feat[labels == i, 0], feat[labels == i, 1], '.', c=c[i])
@@ -60,7 +60,7 @@ def visualize(feat, labels, epoch):
 
 
 def train(epoch):
-    print ("Training... Epoch = %d" % epoch)
+    print "Training... Epoch = %d" % epoch
     ip1_loader = []
     idx_loader = []
     for i,(data, target) in enumerate(train_loader):
